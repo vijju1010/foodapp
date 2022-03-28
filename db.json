@@ -1,0 +1,261 @@
+{
+  "users": [
+    {
+      "id": "vijay",
+      "name": "Vijay",
+      "email": "pvijju198@gmail.com",
+      "kitchen": "vijay's kitchen",
+      "passwd": "1234",
+      "receivedorders": [],
+      "placedorders": [
+        "2"
+      ]
+    },
+    {
+      "id": "krish",
+      "name": "Krish",
+      "email": "sharma.p@westagilelabs.com",
+      "kitchen": "krish's receipe",
+      "passwd": "1234",
+      "receivedorders": [
+        {
+          "foodid": "10",
+          "customerid": "sravani"
+        }
+      ],
+      "placedorders": []
+    },
+    {
+      "id": "sravani",
+      "name": "Sravani",
+      "email": "s161000@rguktsklm.ac.in",
+      "kitchen": "sravani's kitchen",
+      "passwd": "1234",
+      "receivedorders": [
+        {
+          "foodid": "2",
+          "customerid": "vijay"
+        }
+      ],
+      "placedorders": [
+        "11",
+        "10"
+      ]
+    },
+    {
+      "id": "ram",
+      "name": "Ram",
+      "email": "reddikumar205@gmail.com",
+      "passwd": "1212",
+      "kitchen": "ram's kitchen",
+      "receivedorders": [
+        {
+          "foodid": "11",
+          "customerid": "sravani"
+        }
+      ],
+      "placedorders": []
+    },
+    {
+      "id": "pvijju198@gmail.com",
+      "name": "Fatima",
+      "passwd": "82106",
+      "placedorders": [],
+      "receivedorders": []
+    }
+  ],
+  "foods": [
+    {
+      "id": "1",
+      "userid": "sravani",
+      "kitchen": "sravani's kitchen",
+      "name": "Burger",
+      "serves": "2",
+      "remarks": "yummy,Excellent",
+      "location": "Koramangala",
+      "delivery": "takeaway",
+      "price": "100",
+      "image": "/uploads/burger.jpg"
+    },
+    {
+      "id": "2",
+      "kitchen": "sravani's kitchen",
+      "name": "Pizza",
+      "serves": 2,
+      "remarks": "yummy",
+      "location": "Koramangala",
+      "delivery": "homedelivery",
+      "image": "/uploads/pizza.jpg",
+      "price": "100",
+      "userid": "sravani"
+    },
+    {
+      "id": "3",
+      "kitchen": "sravani's kitchen",
+      "name": "Pasta",
+      "serves": 3,
+      "remarks": "eat",
+      "location": "Koramangala",
+      "delivery": "homedelivery",
+      "image": "/uploads/pasta.jpg",
+      "price": "99",
+      "userid": "sravani"
+    },
+    {
+      "id": "4",
+      "kitchen": "sravani's kitchen",
+      "name": "Noodles",
+      "serves": 3,
+      "remarks": "eat",
+      "location": "Koramangala",
+      "delivery": "homedelivery",
+      "image": "/uploads/noodles.jpg",
+      "price": "100",
+      "userid": "sravani"
+    },
+    {
+      "id": "5",
+      "kitchen": "sravani's kitchen",
+      "name": "soya",
+      "serves": 3,
+      "remarks": "eat",
+      "location": "Koramangala",
+      "delivery": "takeaway",
+      "image": "/uploads/soy.jpg",
+      "price": "100",
+      "userid": "sravani"
+    },
+    {
+      "id": "6",
+      "kitchen": "krish's kitchen",
+      "name": "beef",
+      "serves": "1",
+      "remarks": "good",
+      "location": "Hyderabad",
+      "delivery": "takeaway",
+      "image": "/uploads/beef.jpg",
+      "price": "78",
+      "userid": "krish"
+    },
+    {
+      "id": "7",
+      "kitchen": "krish's kitchen",
+      "name": "hamburger",
+      "serves": "1",
+      "remarks": "good",
+      "location": "Hyderabad",
+      "delivery": "takeaway",
+      "image": "/uploads/hamburg.jpg",
+      "price": "78",
+      "userid": "krish"
+    },
+    {
+      "id": "8",
+      "kitchen": "krish's kitchen",
+      "name": "French Fries",
+      "serves": "1",
+      "remarks": "good",
+      "location": "Hyderabad",
+      "delivery": "Homedelivery",
+      "image": "/uploads/frenchfries.jpg",
+      "price": "78",
+      "userid": "krish"
+    },
+    {
+      "id": "9",
+      "kitchen": "krish's kitchen",
+      "name": "grilled chicken",
+      "serves": "1",
+      "remarks": "good",
+      "location": "Hyderabad",
+      "delivery": "takeaway",
+      "image": "/uploads/grilledchicken.jpg",
+      "price": "78",
+      "userid": "krish"
+    },
+    {
+      "id": "10",
+      "kitchen": "krish's kitchen",
+      "name": "icecream",
+      "serves": "1",
+      "remarks": "good",
+      "location": "Hyderabad",
+      "delivery": "homedelivery",
+      "image": "/uploads/icecream.jpg",
+      "price": "78",
+      "userid": "krish"
+    },
+    {
+      "id": "16",
+      "kitchen": "ram's kitchen",
+      "name": "paneer",
+      "serves": "3",
+      "remarks": "nyc",
+      "location": "Visakhapatnam",
+      "delivery": "homedelivery",
+      "image": "/uploads/paneer.jpg",
+      "price": "200",
+      "userid": "ram"
+    },
+    {
+      "id": "11",
+      "kitchen": "ram's kitchen",
+      "name": "quezoncity",
+      "serves": "3",
+      "remarks": "nyc",
+      "location": "Visakhapatnam",
+      "delivery": "homedelivery",
+      "image": "/uploads/quezoncity.jpg",
+      "price": "200",
+      "userid": "ram"
+    },
+    {
+      "id": "12",
+      "kitchen": "ram's kitchen",
+      "name": "bread",
+      "serves": "3",
+      "remarks": "nyc",
+      "location": "Visakhapatnam",
+      "delivery": "homedelivery",
+      "image": "/uploads/bread.jpg",
+      "price": "50",
+      "userid": "ram"
+    },
+    {
+      "id": "13",
+      "kitchen": "ram's kitchen",
+      "name": "beef.jpg",
+      "serves": "1",
+      "remarks": "nyc",
+      "location": "Visakhapatnam",
+      "delivery": "homedelivery",
+      "image": "/uploads/beef.jpg",
+      "price": "50",
+      "userid": "ram"
+    },
+    {
+      "id": "15",
+      "userid": "vijay",
+      "kitchen": "vijay's kitchen",
+      "name": "quesadilla",
+      "serves": "3",
+      "remarks": "good",
+      "location": "Visakhapatnam",
+      "delivery": "takeaway",
+      "image": "/uploads/quesadilla.jpg",
+      "price": "98"
+    },
+    {
+      "id": 17,
+      "userid": "sravani",
+      "kitchen": "sravani's kitchen",
+      "name": "Chapathi",
+      "serves": "2",
+      "remarks": "excellent",
+      "location": "Visakhapatnam",
+      "delivery": "homedelivery",
+      "price": "56",
+      "image": "/uploads/chapathi.jpg"
+    }
+  ]
+}

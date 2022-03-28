@@ -1,0 +1,75 @@
+html 
+    head 
+        title Fooditems
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css')
+        script(src='https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js')
+        script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js')
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js')
+        script
+            include script.js
+    body
+        div 
+            include navbar.pug
+            .container
+                    .row.d-flex.justify-content-center.align-items-center.h-30
+                        .col.col-md-10.col-lg-1.col-xl-10
+                            .card(style='border-radius: 15px;')
+                                .card-body.p-4
+                                    .d-flex.text-black
+                                        .flex-shrink-0
+                                            img.img-fluid(src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp', alt='Generic placeholder image', style='width: 180px; border-radius: 10px;')
+                                        .flex-grow-1.ms-3(style="margin-left:10%")
+                                            //- h1.mb-1 #{user}
+                                            br
+                                            br
+                                            br
+                                            .d-flex.pt-1
+                                                a.btn.btn-outline-primary.me-1.flex-grow-1(href='/addfood' style="color:black") AddFood
+                                                a.btn.btn-outline-primary.me-1.flex-grow-1(href='/myfood' style="color:black") MYFood
+                                                a.btn.btn-outline-primary.me-1.flex-grow-1(href='/receivedorders' style="color:black") ReceivedOrders
+            div 
+                button.btn.btn-info(type='button' onclick="editfood("+123+")" id='eb') EditItem 
+                button.btn.btn-info(type='button' onclick="editfood("+fooditems[0].name+")" id='eb') EditItem 
+                each item in fooditems
+                    button.btn.btn-info(type='button' onclick=`editfood(${item.id})` id='eb') EditItem #{item.id}
+                //-     .card.mb-3(style='max-width: 540px;margin-left:auto;margin-right:auto;margin-top:100px;')
+                //-         button.btn.btn-info(type='button' onclick="deletefood("+item.id+")" id=item.id+'db') DeleteItem
+                //-         button.btn.btn-info(type='submit' id=item.id+'sb' style="display:none") SaveItem
+                    //-     .row.g-0
+                    //-         .col-md-4
+                    //-             img.img-fluid.rounded-start(src='/uploads/beef.jpg', alt='...')
+                    //-         .col-md-8
+                    //-             .card-body
+                    //-                 form(action="/editfood" method="POST" name="place")
+                    //-                     fieldset(id=item.id disabled)
+                    //-                         input(type="hidden",name="foodid", value=item.id)
+                    //-                         input(type="hidden",name="location", value=item.location)
+                    //-                         input(type="hidden",name="image", value=item.image)
+                    //-                         h2.card-title 
+                    //-                             input.border-0.w-50(type="text",name="foodname", value=item.name)
+                    //-                         p.card-text
+                    //-                             label Price : 
+                    //-                             input.border-0.w-50(type="number",name="price", value=item.price)
+                    //-                         p.card-text
+                    //-                             label Kitchen : 
+                    //-                             input.border-0.w-50(type="text",name="kitchen", value=item.kitchen)
+                    //-                         p.card-text
+                    //-                             label Serves : 
+                    //-                             input.border-0.w-50(type="number",name="serves", value=item.serves)
+                    //-                         p.card-text
+                    //-                             label Remarks : 
+                    //-                             input.border-0.w-70(type="text",name="remarks", value=item.remarks)
+                    //-                         p.card-text location :  #{item.location}
+                    //-                         p.card-text
+                    //-                             select(name="delivery" style="display:block" id=item.id+'sopt')
+                    //-                                 option(value="homedelivery") homedelivery
+                    //-                                 option(value="takeaway") takeaway
+                    //-                         br
+                    //-                     button.btn.btn-info(type='button' onclick="editfood("+item.id+")" id=item.id+'eb') EditItem
+                    //-                     button.btn.btn-info(type='button' onclick="deletefood("+item.id+")" id=item.id+'db') DeleteItem
+                    //-                     button.btn.btn-info(type='submit' id=item.id+'sb' style="display:none") SaveItem

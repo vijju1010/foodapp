@@ -1,0 +1,39 @@
+html 
+    head 
+        title #{user.id}
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css')
+        script(src='https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js')
+        script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js')
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js')
+        
+    body
+        div 
+            include navbar.pug
+            section(style='background-color: #f1f1f1;')
+                    .container
+                        .row.d-flex.justify-content-center.align-items-center.h-30
+                            .col.col-md-10.col-lg-1.col-xl-10
+                                .card(style='border-radius: 15px;')
+                                    .card-body.p-4
+                                        .d-flex.text-black
+                                            .flex-shrink-0
+                                                img.img-fluid(src='/uploads/profile.jpg', alt='Generic placeholder image', style='width: 180px;height:200px; border-radius: 10px;')
+                                            .flex-grow-1.ms-3(style="margin-left:10%")
+                                                form(action="/editfood" method="POST" name="place")
+                                                    fieldset(id=user.id disabled)
+                                                        h2.card-title 
+                                                            input.border-0.w-50(type="text",name="foodname", value=user.name)
+                                                //- h1.mb-1 #{user.name}
+                                                br
+                                                p.mb-2.pb-1(style='color: #2b2a2a;') Kitchen: #{user.kitchen}
+                                                br
+                                                .d-flex.pt-1
+                                                    a.btn.btn-outline-primary.me-1.flex-grow-1(href='/addfood' style="color:black") AddFood
+                                                    a.btn.btn-outline-primary.me-1.flex-grow-1(href='/myfood' style="color:black") MYFood
+                                                    a.btn.btn-outline-primary.me-1.flex-grow-1(href='/receivedorders' style="color:black") ReceivedOrders
+
